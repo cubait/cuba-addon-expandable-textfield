@@ -1,0 +1,11 @@
+@import "hover-defaults";
+@import "it.nexbit.expandabletextfield/hover-ext-defaults";
+@import "app-components";
+@import "it.nexbit.expandabletextfield/hover-ext";
+
+.hover {
+  // include auto-generated app components SCSS
+  @include app_components;
+
+  @include it_nexbit_expandabletextfield-hover-ext;
+}

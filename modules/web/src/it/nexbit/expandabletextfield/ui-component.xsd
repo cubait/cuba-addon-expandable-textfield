@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://schemas.nexbit.it/nxexptxt/1.0/ui-component.xsd"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://schemas.nexbit.it/nxexptxt/1.0/ui-component.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:layout="http://schemas.haulmont.com/cuba/screen/layout.xsd">
+
+    <xs:element name="expandableTextField">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="layout:baseTextComponent">
+                    <xs:attributeGroup ref="layout:hasBuffered"/>
+                    <xs:attributeGroup ref="layout:hasConversionErrorMessage"/>
+
+                    <xs:attribute name="stylename" type="layout:textFieldStylename"/>
+                    <xs:attribute name="maxLength" type="xs:int"/>
+                    <xs:attribute name="trim" type="xs:boolean"/>
+                    <xs:attribute name="inputPrompt" type="layout:resourceString"/>
+                    <xs:attribute name="caseConversion" type="layout:caseConversion"/>
+                    <xs:attribute name="textChangeEventMode" type="layout:textChangeEventMode"/>
+                    <xs:attribute name="textChangeTimeout" type="xs:int"/>
+                    <xs:attribute name="htmlName" type="xs:string"/>
+
+                    <xs:attribute name="collapsable" type="xs:boolean"/>
+                    <xs:attribute name="expandWithEnter" type="xs:boolean"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

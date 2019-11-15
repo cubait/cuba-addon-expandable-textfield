@@ -1,0 +1,5 @@
+@import "hover-ext";
+
+@mixin it_nexbit_expandabletextfield {
+  @include it_nexbit_expandabletextfield-hover-ext;
+}

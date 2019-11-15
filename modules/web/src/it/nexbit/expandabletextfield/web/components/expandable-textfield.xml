@@ -1,0 +1,8 @@
+<composite xmlns="http://schemas.haulmont.com/cuba/screen/composite.xsd">
+    <cssLayout id="rootLayout" width="100%" stylename="v-component-group nx-expandable-textfield">
+        <textField id="valueField"/>
+        <button id="expandBtn"
+                icon="font-icon:ELLIPSIS_H"
+                stylename="nx-expandable-textfield__button icon-only"/>
+    </cssLayout>
+</composite>

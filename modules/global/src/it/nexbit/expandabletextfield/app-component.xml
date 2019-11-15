@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<app-component xmlns="http://schemas.haulmont.com/cuba/app-component.xsd"
+               dependsOn="com.haulmont.cuba">
+
+    <module name="global" blocks="*">
+        <artifact name="nxexptxt-global" appJar="true"/>
+
+        <property name="cuba.persistenceConfig"
+                  value="+it/nexbit/expandabletextfield/persistence.xml"/>
+        <property name="cuba.metadataConfig" value="+it/nexbit/expandabletextfield/metadata.xml"/>
+        <property name="cuba.viewsConfig" value="+it/nexbit/expandabletextfield/views.xml"/>
+    </module>
+    <module name="core" dependsOn="global" blocks="core">
+        <artifact name="nxexptxt-core" appJar="true"/>
+
+        <property name="cuba.springContextConfig"
+                  value="+it/nexbit/expandabletextfield/spring.xml"/>
+        <property name="cuba.mainMessagePack" value="+it.nexbit.expandabletextfield.core"/>
+    </module>
+    <module name="web" dependsOn="global" blocks="web">
+        <artifact name="nxexptxt-web" appJar="true"/>
+        <artifact name="nxexptxt-web" classifier="web" ext="zip" configuration="webcontent"/>
+        <artifact name="nxexptxt-web" ext="jar" configuration="themes"/>
+
+        <property name="cuba.springContextConfig"
+                  value="+it/nexbit/expandabletextfield/web-spring.xml"/>
+        <property name="cuba.dispatcherSpringContextConfig"
+                  value="+it/nexbit/expandabletextfield/web-dispatcher-spring.xml"/>
+        <property name="cuba.windowConfig" value="+it/nexbit/expandabletextfield/web-screens.xml"/>
+        <property name="cuba.menuConfig" value="+it/nexbit/expandabletextfield/web-menu.xml"/>
+        <property name="cuba.permissionConfig"
+                  value="+it/nexbit/expandabletextfield/web-permissions.xml"/>
+        <property name="cuba.web.componentsConfig"
+                  value="+it/nexbit/expandabletextfield/ui-component.xml"/>
+        <property name="cuba.mainMessagePack" value="+it.nexbit.expandabletextfield.web"/>
+    </module>
+</app-component>

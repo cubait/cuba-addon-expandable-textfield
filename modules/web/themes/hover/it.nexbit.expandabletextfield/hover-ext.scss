@@ -1,0 +1,12 @@
+/* Define your theme modifications inside next mixin */
+@mixin it_nexbit_expandabletextfield-hover-ext {
+
+    .nx-expandable-textfield {
+        display: flex;
+    }
+    .nx-expandable-textfield__button {
+        width: $v-unit-size;
+        min-width: $v-unit-size;
+    }
+
+}
